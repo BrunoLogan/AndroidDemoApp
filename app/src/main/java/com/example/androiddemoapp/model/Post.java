@@ -1,5 +1,7 @@
 package com.example.androiddemoapp.model;
 
+import java.io.Serializable;
+
 public class Post {
     private int userId;
     private int id;

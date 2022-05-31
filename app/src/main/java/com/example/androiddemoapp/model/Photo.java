@@ -1,14 +1,26 @@
 package com.example.androiddemoapp.model;
 
-public class Photo {
+import java.io.Serializable;
+
+public class Photo implements Serializable {
+
+    private static final long serialVersionUID = 1L;
     private int albumId;
     private int id;
     private String title;
     private String url;
     private String thumbnailUrl;
 
-    public Photo () {
+    public Photo() {
 
+    }
+
+    public Photo(int albumId, int id, String title, String url, String thumbnailUrl) {
+        this.albumId = albumId;
+        this.id = id;
+        this.title = title;
+        this.url = url;
+        this.thumbnailUrl = thumbnailUrl;
     }
 
     public int getAlbumId() {

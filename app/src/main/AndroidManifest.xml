@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidDemoApp"
         tools:targetApi="31">
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -23,6 +24,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".PhotoDetailActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/title_activity_photo_detail"
+            android:theme="@style/Theme.AndroidDemoApp.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.androiddemoapp.MainActivity" />
+        </activity>
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
